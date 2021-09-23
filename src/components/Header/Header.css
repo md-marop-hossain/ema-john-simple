@@ -1,0 +1,22 @@
+.logo{
+    height: 50px;
+}
+.header nav{
+    background-color: black;
+    line-break: 40px;
+    text-align: left;
+}
+.header nav a{
+    text-decoration: none;
+    color: white;
+    margin-right: 20px;
+    padding: 15px;
+    /* padding-top: 20px; */
+    font-size: 18px;
+}
+.header nav a:hover{
+    background-color: lightgray;
+}
+.shopp{
+    margin-left: 35px;
+}
