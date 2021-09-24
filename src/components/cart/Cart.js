@@ -1,14 +1,13 @@
 import React from 'react';
 import './Cart.css';
+
 const Cart = (props) => {
     // console.log("form cart", props.cart);
     const { cart } = props;
-
-
-
     // const total = cart.reduce((previous, product) => previous + product.price, 0);
     let total = 0;
     let totalQuantity = 0;
+
     for (const product of cart) {
         product.quantity = !product.quantity ? 1 : product.quantity;
         total = total + product.price * product.quantity;
@@ -23,11 +22,33 @@ const Cart = (props) => {
     return (
         <div>
             <h4>Order summery</h4>
-            <h5>Items Ordered : {totalQuantity}</h5>
-            <h5>Total         : {total.toFixed(2)} </h5>
-            <h5>Shipping      : {shipping.toFixed(2)} </h5>
-            <h5>Tax : {tax.toFixed(2)}</h5>
-            <h5>Grand Total : {grandTotal.toFixed(2)}</h5>
+            <table className="table-class">
+                <tr>
+                    <th><h5>Items Ordered</h5></th>
+                    <th>:</th>
+                    <th>{totalQuantity}</th>
+                </tr>
+                <tr>
+                    <th><h5>Total</h5></th>
+                    <th><h5>:</h5></th>
+                    <th><h5>{total.toFixed(2)}</h5></th>
+                </tr>
+                <tr>
+                    <th><h5>Shipping</h5></th>
+                    <th><h5>:</h5></th>
+                    <th><h5>{shipping.toFixed(2)}</h5></th>
+                </tr>
+                <tr>
+                    <th><h5>Tax</h5></th>
+                    <th><h5>:</h5></th>
+                    <th><h5>{tax.toFixed(2)}</h5></th>
+                </tr>
+                <tr>
+                    <th><h5>Grand Total</h5></th>
+                    <th><h5>:</h5></th>
+                    <th><h5>{grandTotal.toFixed(2)}</h5></th>
+                </tr>
+            </table>
         </div>
     );
 };
