@@ -74,7 +74,7 @@ const Shop = () => {
 
                 </div>
                 <div className="product-container">
-                    <h3>Products: {products.length}</h3>
+                    {/* <h3>Products: {products.length}</h3> */}
                     {
                         displayProducts.map(product => <Product
                             key={product.key}

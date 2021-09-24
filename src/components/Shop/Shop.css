@@ -1,11 +1,14 @@
 .shop-container{
     display: grid;
     grid-template-columns:1fr 2fr 1fr;
+    background-color: #f5f5f5;
 }
 .product-container{
     border-right: 1px solid lightgray;
+    border-left: 1px solid lightgray;
     margin-right: 5px;
     margin-left: 50px;
+    background-color: #ffffff;
 }
 .cart-container{
     text-align: left;
